@@ -7,6 +7,9 @@ on:
 
   workflow_dispatch:
 
+env:
+  SAMPLE: "Arruda"
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -20,3 +23,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo ${{ vars.SAMPLE }}
+
+      - name: Run a one-line script
+        run: echo ${{ env.SAMPLE }}
